@@ -1,0 +1,54 @@
+DAY 3 ASSIGNMENT 3
+
+
+Questions 1:
+Create a numpy array starting from 2 till 50 with a stepsize of 3.
+SOL import numpy as np
+arr=np.arange(2,51,3)
+print(arr)
+
+
+
+Questions 2: Accept two lists of 5 elements each from the user. Convert them to numpy arrays. Concatenate these arrays and print it. Also sort these arrays and print it.
+SOL:
+import numpy as np
+
+l1=[]
+l2=[]
+print("Enter 1st list : ")
+for i in range(5):
+  l1.append(int(input())) 
+print("Enter 2nd list : ")
+for i in range(5):
+  l2.append(int(input()))
+arr1=np.array(l1)
+arr2=np.array(l2)
+
+arr3=np.concatenate((arr1,arr2),axis=0)
+print("After Concatenation : ")
+print(arr3)
+
+print("After sort : ")
+print(np.sort(arr3,axis=None))
+
+
+
+Questions 3: Write a code snippet to find the dimensions of a ndarray and its size.
+SOL. import numpy as np
+arr=np.array([[1,2,3],[4,5,6]])
+
+print("No. of dimensions: ", arr.ndim)
+print("Size of array: ", arr.size)
+
+
+
+
+Question 4: How to convert a 1D array into a 2D array? Demonstrate with the help of a code snippet Hint: np.newaxis, np.expand_dims
+SOL. import numpy as np
+arr=np.array([[1,2,3,4,5,6]])
+
+arr2=np.reshape(arr,(3,2))
+print(arr2)
+
+
+
